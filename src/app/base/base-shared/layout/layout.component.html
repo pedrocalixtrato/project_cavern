@@ -1,0 +1,32 @@
+<div class="layout-wrapper">
+  <div class="menu-lateral">
+    <div class="menu-position">
+      <div class="logo-style">LOGO</div>
+      <div class="btn-diretorio">
+        <i class="size-icon material-icons">
+        folder
+        </i>
+        <div>
+        Meu diretório
+        </div>
+      </div>
+    </div>
+    <div class="menu-position">
+      <p class="menu">ARQUIVOS</p>
+      <p class="sub-menu" (click)="clkArtigos()" >Meus artigos</p>
+      <p class="sub-menu">Compartilhados</p>
+      <p class="sub-menu">Lixeira</p>
+
+      <p class="menu">CATEGORIAS</p>
+      <p class="sub-menu">Sem categoria</p>
+      <p class="sub-menu">Desenvolvimento Mobile</p>
+      <p class="sub-menu">TI</p>
+      <p class="sub-menu">Design</p>
+      <p class="sub-menu">Desenvolvimento Web</p>
+    </div>
+  </div>
+  <div class="layout-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

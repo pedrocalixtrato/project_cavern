@@ -1,0 +1,48 @@
+<div class="content-wrapper">
+  <div class="layout-content">
+    <div class="titulo-wrapper">
+      <div class="titulo">Meus artigos</div>
+      <div class="titulo-ordenacao">
+        <div class="ordenacao"> <i class="icon-position material-icons">filter_list</i> Mais novos primeiros</div>
+        <i class="material-icons">clear</i>
+      </div>
+    </div>
+
+    <div class="actions">
+      <div>1 artigo selecionado</div>
+      <div>
+        <i class="material-icons">filter_none</i>
+        <i class="material-icons">edit</i>
+        <i class="material-icons">delete</i>
+      </div>
+    </div>
+    <div appCatSmoothScroll [maxHeight]="'65%'">
+      <div  class="list-wrapper" *ngFor="let lista of artigos; let i = index" (click)="selectList(i)">
+        <i class="icon-size material-icons">check_circle</i>
+        <div>
+          <div class="text-list">{{lista.name}}</div>
+          <div class="text-list-bold"> {{lista.title}}</div>
+          <div class="text-list"> {{lista.date}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div><i class="add-icon-size material-icons">add_circle</i></div>
+  </div>
+  <div class="content-right">
+    <div >
+      <h1> {{artigo?.title}}</h1>
+      <div class="desc-box">
+        <div>Publicado por: {{artigo?.name}}</div>
+        <div>{{artigo?.date}}</div>
+      </div>
+    </div>
+    <div class="img-box"
+      [ngStyle]="{
+        'background-image': backgroundImage
+      }"
+      >
+    </div>
+    <div class="desc-box">{{artigo?.descricao}}</div>
+  </div>
+</div>
